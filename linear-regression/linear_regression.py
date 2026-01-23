@@ -1,5 +1,5 @@
 import numpy as np
-class LinearRegression:
+class LinearRegression1:
     def __init__(self, weights = None, bias = 0, alpha = 0.0001, epochs = 1000):
         self.weights = weights
         self.bias = bias
@@ -8,7 +8,7 @@ class LinearRegression:
 
     def _gradient_descent(self, X, Y):
         data_length = len(X)
-        if self.weights == None:
+        if self.weights is None:
             self.weights = np.zeros(len(X[0]))
         weights_gradients = np.zeros(len(X[0]))
         bias_gradient = 0
