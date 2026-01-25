@@ -1,6 +1,6 @@
 import numpy as np
 class LinearRegression1:
-    def __init__(self, weights = None, bias = 0, alpha = 0.0001, epochs = 1000):
+    def __init__(self, weights = None, bias = 0, alpha = 0.001, epochs = 1000):
         self.weights = weights
         self.bias = bias
         self.alpha = alpha
