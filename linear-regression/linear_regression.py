@@ -5,6 +5,7 @@ class LinearRegression1:
         self.bias = bias
         self.alpha = alpha
         self.epochs = epochs
+        self.losses = []   # store loss history
 
     def _gradient_descent(self, X, Y):
         data_length = len(X)
@@ -27,8 +28,15 @@ class LinearRegression1:
 
 
     def fit(self, X, Y):
-        for _ in range(self.epochs):
+        for i in range(self.epochs):
             self.weights, self.bias = self._gradient_descent(X, Y)
+
+            # predictions
+            y_pred = X @ self.weights + self.bias
+
+            # MSE loss
+            loss = np.mean((y_pred - Y) ** 2)
+            self.losses.append(loss)
 
 
     def predict(self, X):
