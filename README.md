@@ -22,8 +22,7 @@ This repository is created to:
 
 1. Clone the repository
 2. Install required packages
-   ```bash
-   pip install -r requirements.txt```  
+   ```pip install -r requirements.txt```  
 4. Navigate to the model directory you want to explore  
 5. Open the Jupyter notebook and run all cells  
 6. Read the model-specific README for detailed explanations  
