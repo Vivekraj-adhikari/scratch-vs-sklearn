@@ -11,7 +11,7 @@ performance with sklearn’s LinearRegression model.
 
 ## Dataset
 
-- Used Cars dateset from kaggle
+- [Used Cars Dataset](https://www.kaggle.com/datasets/shashi0dev/indian-used-car-listings-57480-clean-records)
 - Features used:
   - `km_driven`
   - `years_old`
@@ -54,9 +54,9 @@ the gradient descent-based approach.
 
 1. Clone the repository
 2. Install required libraries:
-   - numpy
-   - pandas
-   - matplotlib
+   ```bash
+   pip install -r requirements.txt
+   ```
 3. Open `used_cars.ipynb` and run all cells
 
 ## Key Learnings
