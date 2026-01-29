@@ -12,7 +12,7 @@ class LinearRegression1:
             alpha: float, default=0.001
                 - Learning Rate
             epochs: int, default=1000
-                - Number of trraining iterations
+                - Number of training iterations
             losses: list
                 - History of the losses per training iteration
         """
