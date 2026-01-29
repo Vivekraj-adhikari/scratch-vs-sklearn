@@ -38,7 +38,9 @@ class CustomLogisticRegression:
             sigmoid_value: float
                 Value after calculating sigmoid
         """
-        pass
+        negative_z = -(np.dot(self.weights, features) + self.bias)
+        sigmoid_value = 1 / (1 + np.exp(negative_z))
+        return sigmoid_value
 
     
     def __gradient_descent(self, X, Y):
