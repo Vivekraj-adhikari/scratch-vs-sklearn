@@ -105,3 +105,27 @@ class CustomLogisticRegression:
 
         for _ in range(self.epochs):
             self.__gradient_descent(X, Y)
+
+    def predict(self, X):
+        """
+            Train the model using Batch Gradient Descent
+
+            Parameters
+            ----------
+            X: matrix like
+                - Input Features
+            
+            Returns
+            -------
+            list
+                - Predicted Outputs
+        """
+        X = self.__ensure_numpy_array(X)
+        features_length = len(X)
+        predicted_output = []
+        for i in range(features_length):
+            prediction = self.__sigmoid(X[i])
+            predicted_output.append(prediction)
+        
+        return predicted_output
+        
