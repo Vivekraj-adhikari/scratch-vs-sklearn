@@ -81,7 +81,7 @@ class LinearRegression1:
 
     def predict(self, X):
         """
-            Train the model using Batch Gradient Descent
+            Predicts the output for given inputs
 
             Parameters
             ----------
@@ -103,7 +103,7 @@ class LinearRegression1:
     
     def mean_squared_error(self, test, prediction):
         """
-            Train the model using Batch Gradient Descent
+            Calculates MSE
 
             Parameters
             ----------
@@ -127,7 +127,7 @@ class LinearRegression1:
     
     def model_score(self, test, prediction):
         """
-            Train the model using Batch Gradient Descent
+            Calculates r_squared score
 
             Parameters
             ----------
