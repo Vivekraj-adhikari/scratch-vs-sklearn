@@ -89,3 +89,19 @@ class CustomLogisticRegression:
         
         self.weights -= self.alpha * (dw / data_length)
         self.bias -= self.alpha * (db / data_length)
+
+    
+    def fit(self, X, Y):
+        """
+            Trains the model using batch gradient descent
+
+            Parameters
+            ----------
+            X: matrixlike
+                - Input features
+            Y: arraylike
+                - Observed output
+        """
+
+        for _ in range(self.epochs):
+            self.__gradient_descent(X, Y)
