@@ -4,7 +4,7 @@ import pandas as pd
 class CustomLogisticRegression:
     def __init__(self, weights = None, bias = 0, alpha = 0.001, epochs = 1000):
         """
-            Linear Regression Model from scratch using Gradient Descent
+            Logistic Regression Model from scratch using Gradient Descent
             This model tries to minimize the loss using Gradient Descent
 
             Parameters
@@ -108,7 +108,7 @@ class CustomLogisticRegression:
 
     def predict(self, X):
         """
-            Train the model using Batch Gradient Descent
+            Predicts the output for given inputs
 
             Parameters
             ----------
