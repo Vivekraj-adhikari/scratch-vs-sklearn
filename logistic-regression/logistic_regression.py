@@ -126,6 +126,10 @@ class CustomLogisticRegression:
         predicted_output = []
         for i in range(features_length):
             prediction = self.__sigmoid(X[i])
+            if prediction < 0.5:
+                prediction = 0
+            else:
+                prediction = 1
             predicted_output.append(prediction)
         
         return predicted_output
