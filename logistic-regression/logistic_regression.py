@@ -55,10 +55,10 @@ class CustomLogisticRegression:
             -------
             X: numpy_array
         """
-        if isinstance(X, pd.DataFrame):
+        if isinstance(X, (pd.DataFrame, pd.Series)):
             return X.to_numpy()
         
-        return X
+        return np.asarray(X)
 
     def __gradient_descent(self, X, Y):
         """
@@ -72,10 +72,8 @@ class CustomLogisticRegression:
             Y: arraylike
                 - Observed output
         """
-
         X = self.__ensure_numpy_array(X)
         Y = self.__ensure_numpy_array(Y)
-
         data_length = len(X)
         dw = np.zeros(len(X[1]))
         db = 0
@@ -102,7 +100,10 @@ class CustomLogisticRegression:
             Y: arraylike
                 - Observed output
         """
-
+        X = self.__ensure_numpy_array(X)
+        Y = self.__ensure_numpy_array(Y)
+        if self.weights is None:
+            self.weights = np.zeros(len(X[1]))
         for _ in range(self.epochs):
             self.__gradient_descent(X, Y)
 
