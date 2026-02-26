@@ -89,8 +89,8 @@ This validates deep understanding of optimization and classification mechanics.
 - Scikit-Learn  
 
 ---
-
-
+## Visit root directory for "How to use"
+---
 ## 🧠 Key Takeaways
 
 - Data preprocessing significantly impacts performance  
@@ -101,3 +101,4 @@ This validates deep understanding of optimization and classification mechanics.
 ---
 
 ⭐ If you found this project interesting, feel free to star the repository!
+
